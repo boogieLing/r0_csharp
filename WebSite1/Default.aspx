@@ -40,7 +40,7 @@
         class_list[i].onclick=function(){
             var num=this.index+1 ;
             var tmp="class_table_"+num.toString()+".html" ;
-            console.log(tmp) ;
+            //console.log(tmp) ;
             document.getElementById("myframe").src=tmp ;
          }
      }
