@@ -1,0 +1,109 @@
+*{
+    padding: 0 ;
+    margin: 0 ;
+
+}
+html{
+    -ms-overflow-style:none;
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar{
+        display:none;
+    }
+}
+.main {
+    position: relative;
+    display: flex ;
+    flex-wrap: nowrap ;
+    flex-direction: column ;
+    justify-content: center ;
+    align-items: center ;
+    height: 30vh ;
+    width: 100vw ;
+    h1 {
+        position: relative ;
+        display: block ;
+        user-select: none ;
+        font-size: 27px ;
+        font-weight: 300 ;
+        letter-spacing: 1.7px ;
+        color: #636e72 ;
+        text-shadow: 5px 5px 5px #2d3436 ;
+    }
+    #table_select {
+        position: relative ;
+        display: flex ;
+        padding-top: 10px ;
+        padding-bottom: 10px ;
+        margin-top: 30px ;
+        flex-wrap: nowrap ;
+        flex-direction: row ;
+        justify-content: center ;
+        align-items: center ; 
+        border-radius: 20px ;
+        box-shadow: 5px 5px 5px rgba(45, 52, 54,0.2) ;
+        label[class^="class_"] {
+            position: relative ;
+            flex: 1 ;
+            width: 100% ;
+            padding-left: 15px ;
+            padding-right: 15px ;
+            cursor: pointer ;
+            z-index: 1 ;
+            font-size: 11px ;
+            font-weight: 700 ;
+            span {
+                position: relative ;
+                padding: 0 ;
+                //display: inline-block;
+                height: 100% ;
+                color: #636e72 ;
+                z-index: -1 ;
+                line-height: 100% ;
+                text-decoration: none ;
+                transition: 0.5s ease ;
+            }
+            &:hover{
+        
+            }
+        }
+        .tab {
+            position: absolute ;
+            height: 100% ;
+            width: 33.3% ;
+            left: 0 ;
+            bottom: 0 ;
+            border-radius: 20px ;
+            background-image: linear-gradient(125deg, #ffeaa7, #fab1a0, #ff7675 50%, #8abcd1, #51c4d3, #1ba784) !important;
+            background-repeat: no-repeat !important;
+            background-size: 400% !important;
+            transition: 0.5s cubic-bezier(.36,-0.36,.52,1.47);
+        }
+        input {
+            display: none ;
+        }
+        #_class_1:checked + .class_1 span {
+            color: #ffffff !important;
+        }
+        #_class_2:checked + .class_2 span {
+            color: #ffffff !important;
+        }
+        #_class_3:checked + .class_3 span {
+            color: #ffffff !important;
+        }
+        #_class_2:checked ~ .tab {
+            background-position: 40% 40%  ;
+            left: 33.3% ;
+        }
+        #_class_3:checked ~ .tab {
+            background-position: 100% 100%  ;
+            left: 67% ;
+        }
+
+    }    
+}
+iframe {
+    position: relative;
+    width: 100% ; 
+    height: 100vh !important;
+    margin-top: 0px ;
+}

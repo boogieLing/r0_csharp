@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Class_1</title>
+    <style>
+        *{ padding: 0 ; margin: 0 ; }
+
+        table.first-line {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+        }
+        table.first-line tr.time {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center; 
+            margin-top: 10px ;
+        }
+        table.first-line tr.time td {
+            position: relative;
+            margin-left: 13px ;
+            margin-right: 13px ;
+            width: 150px ;
+            user-select: none; 
+            font-weight: 700 ;
+            font-size: 15px ;
+            color: #636e72 ;
+            text-align: center ;
+        }
+        table.first-line .time td::before {
+            content: "『" ;
+            font-size: 12px ;
+            position: relative ;
+            top: -2px ;
+            left: -4px ;
+        }
+        table.first-line .time td::after {
+            content: "』" ;
+            font-size: 12px ;
+            position: relative ;
+            bottom: -2px ;
+            right: -4px ;
+        }
+        table.detail {
+            margin-top: 30px ;
+            position: relative;
+            display: flex;
+            flex-direction: row ;
+            justify-content: center;
+            align-items: center;
+            width: auto ;
+        }
+        table.detail tbody{
+            position: relative;
+            display: flex;
+            flex-direction: row ;
+            justify-content: center;
+            align-items: flex-start;
+            width: auto ;
+            transition: 0.3s ;
+        }
+        table.detail tr.lesson {
+            position: relative;
+            display: flex;
+            flex: 1 ;
+            flex-direction: column ;
+            justify-content: flex-start;
+            align-items: center; 
+            width: 150px ;
+            margin-left: 13px ;
+            margin-right: 13px ;
+            counter-reset: cnt_td 0 ;
+            transition: 0.3s ;
+        }
+        table.detail tr.lesson td{
+            position: relative;
+            box-sizing: border-box;
+            width: 150px ;
+            height: 50px ;
+            text-align: left;
+            padding-left: 10px ;
+            //padding-right: 20px ;
+            line-height: 50px ;
+            box-shadow: 0 0 10px rgba(99, 110, 114,0.0) ;
+            user-select: none;
+            transition: 0.3s ;
+            border-left: solid 2px rgba(223, 230, 233,1.0);
+            font-size: 13px ;
+            counter-increment: cnt_td ;
+            letter-spacing: 0.7px ;
+        }  
+        table.detail tbody:hover {
+            color: rgba(178, 190, 195,0.5) ;
+        }
+        table.detail tr.lesson td:hover{
+            box-shadow: 0 0 10px rgba(0, 206, 201,0.5) ;
+            width: 150px ;
+            height: 50px ;
+            line-height: 50px ;
+            color:black ;
+            border-left: solid 2px rgba(0, 206, 201,1.0) ;
+        }
+        table.detail tr.lesson td::before {
+             content: counter(cnt_td)"." ;
+             position: relative ;
+             left: -5px ;
+             top: -5px ;
+             font-weight: 300 ;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <table class="first-line">
+            <tr class="time">
+                <td>Monday</td>
+                <td>Tuesday</td>
+                <td>Wednesday</td>
+                <td>Thursday</td>
+                <td>Friday</td>
+            </tr>
+        </table>
+        <table class="detail">
+            <tr class="lesson">
+                <td>Progamming</td>
+                <td>Progamming</td>
+                <td>Progamming</td>
+                <td>Progamming</td>
+                <td>Progamming</td>
+                <td>Progamming</td>
+                <td>Progamming</td>
+                <td>Progamming</td>
+            </tr>
+            <tr class="lesson">
+                <td>Progamming</td>
+                <td>Sleeping</td>
+                <td>Progamming</td>
+                <td>Sleeping</td>
+                <td>Sleeping</td>
+                <td>Sleeping</td>
+                <td>Sleeping</td>
+                <td>Sleeping</td>
+            </tr>
+            <tr class="lesson">
+                <td>Fishing</td>
+                <td>Sleeping</td>
+                <td>Fishing</td>
+                <td>Sleeping</td>
+            </tr>
+            <tr class="lesson">
+                <td>Progamming</td>
+                <td>Sleeping</td>
+                <td>Progamming</td>
+                <td>Sleeping</td>
+                <td>Fishing</td>
+                <td>Sleeping</td>
+            </tr>
+            <tr class="lesson">
+                <td>Fishing</td>
+                <td>Fishing</td>
+            </tr>
+        </table>
+    </div>
+</body>
+<footer>
+    
+</footer>
+</html>
