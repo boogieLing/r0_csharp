@@ -44,6 +44,5 @@
             document.getElementById("myframe").src=tmp ;
          }
      }
-     //test 1002
 </script>
 </html>
