@@ -6,7 +6,7 @@
 <html>
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>xx大学网站</title>
+    <title>曙光大学网站</title>
     <link href="~/css/base.css" rel="stylesheet" type="text/css"/>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -15,19 +15,22 @@
     <form id="form1" runat="server">
     <div class="page">
         <div class="logo"></div>
-        <div class="left">
+        <main>
             <div class="left-column">
                 <ul class="link-ul">
-                    <li>学校专栏</li>
-                    <li>学校简介</li>
+                    <li><a href="index.aspx">学校专栏</a></li>
+                    <li><a href="detail.aspx">学校简介</a></li>
                     <li>校园风光</li>
                     <li>考生问答</li>
                 </ul>
             </div>
-        </div>
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-
-        </asp:ContentPlaceHolder>
+            <div class="center-box">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            
+        </main>
+        <div class="bottom">曙光大学·版权所有·2017-2020</div>
     </div>
     </form>
 </body>

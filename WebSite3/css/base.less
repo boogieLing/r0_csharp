@@ -2,5 +2,92 @@
     padding:0 ;
     margin:0 ;
 }
-body {
+.page {
+    position: relative ;
+    width: 100vw ;
+    height: 100vh ;
+    display: flex; 
+    flex-direction: column ;
+    justify-content: flex-start ;
+    align-items: flex-start ;
+    .logo{
+        position: relative ;
+        background-image: url("../img/logo.jpg");
+        background-size: cover;
+        width: 100% ;
+        height: 250px ;
+    }
+    main {
+        position: relative ;
+        flex: 1 ;
+        display: flex ;
+        flex-direction: row; 
+        justify-content: flex-start; 
+        align-items: center ;
+        .left-column {
+            position: relative ;
+            box-sizing: border-box ;
+            width: 200px ;
+            height: 100% ;  
+            //background-color: red ;
+            padding: 8px ;
+            background: #2d3436 ;
+            .link-ul {
+                position: relative ;
+                width: 100% ; 
+                display: flex ;
+                flex-direction: column ;
+                justify-content: flex-start;
+                align-items: center ;
+                list-style: none ;
+                background: rgba(99, 110, 114,0.5) ;
+                li {
+                    position: relative; 
+                    text-align: center ;
+                    box-sizing: border-box;
+                    height: 40px ;
+                    width: 100% ;
+                    margin-bottom: 10px ;
+                    user-select: none ;
+                    cursor: pointer ; 
+                    transition: 0.3s ;
+                    line-height: 40px ;
+                    a {
+                        display: inline-block ;
+                        width: 100% ;
+                        height: 40px ;
+                        text-decoration: none ;
+                        color: black ;
+                        transition: 0.3s ;
+                    }
+                    &:hover a{
+                        color:white ;
+                        background-color: #81ecec ;
+                        box-shadow: 0 0 20px rgba(129, 236, 236,0.5), 0 0 50px rgba(129, 236, 236,0.5), 0 0 90px rgba(129, 236, 236,0.8);
+                    }
+                }
+            }
+        }
+        .center-box {
+            position: relative; 
+            flex:1 ;
+            display: flex ;
+            flex-direction: row ;
+            justify-content: space-between;
+            align-items: center ;
+        }
+    }
+    .bottom {
+        position: relative ;
+        flex: 0 auto ;
+        height: 30px ;
+        width: 100vw ;
+        color: white ;
+        font-size: 13px ;
+        line-height: 30px ;
+        text-align: center ;
+        user-select: none ;
+        background-image: url("../img/bottom.jpg");
+        background-size: cover;
+    }
 }
