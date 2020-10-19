@@ -42,13 +42,13 @@
   top: 0 ;
   left: -100%;
   width: 100% ;
-  height: 2px ;
+  height: 1.5px ;
   background: linear-gradient(90deg, transparent, #00cec9);
 }
 .aspx-body #start_but span:nth-child(2) {
   top: -100%;
   right: 0%;
-  width: 2px ;
+  width: 1.5px ;
   height: 100% ;
   background: linear-gradient(180deg, transparent, #00cec9);
 }
@@ -56,13 +56,13 @@
   bottom: 0%;
   right: -100%;
   width: 100% ;
-  height: 2px ;
+  height: 1.5px ;
   background: linear-gradient(270deg, transparent, #00cec9);
 }
 .aspx-body #start_but span:nth-child(4) {
   bottom: -100%;
   left: 0%;
-  width: 2px ;
+  width: 1.5px ;
   height: 100% ;
   background: linear-gradient(360deg, transparent, #00cec9);
 }
@@ -204,7 +204,7 @@
   align-items: flex-start;
   flex-wrap: wrap ;
   margin-top: 20px ;
-  max-height: calc(50%);
+  max-height: calc(100% - 200px);
 }
 .aspx-body ul.request-box li {
   position: relative ;
@@ -269,7 +269,8 @@
 .aspx-body .ac-rate {
   position: absolute ;
   left: 40px ;
-  bottom: 40px ;
+  bottom: 50px ;
+  user-select: none ;
 }
 .aspx-body .ac-rate .iconfont {
   position: relative ;
@@ -282,7 +283,21 @@
   color: #dff9fb ;
   letter-spacing: 1px ;
   margin-left: 10px ;
+}
+.aspx-body .tiny-ac-rate {
+  position: absolute ;
+  left: 0px ;
+  bottom: -20px;
   user-select: none ;
+  margin: 0 ;
+  padding: 0 ;
+}
+.aspx-body .tiny-ac-rate > span {
+  position: relative ;
+  color: #fab1a0 ;
+  display: inline-block;
+  letter-spacing: 0.5px ;
+  font-size: 8px ;
 }
 @-webkit-keyframes vertical {
   0% {

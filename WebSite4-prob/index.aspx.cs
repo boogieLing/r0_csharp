@@ -13,7 +13,7 @@ public partial class index : System.Web.UI.Page
        
     }
     [WebMethod]
-    public static string getAns(int num_1 , int num_2 , char cal_type , double ans_input)
+    public static string ansStatus(int num_1 , int num_2 , char cal_type , double ans_input)
     {
         int ans_trans=(int)Math.Floor(ans_input*100) ;
         double res=0.0 ;

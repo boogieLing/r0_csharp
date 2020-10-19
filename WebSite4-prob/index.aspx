@@ -35,7 +35,13 @@
             <div class="ac-rate">
                 <i class="iconfont icon-CatFootprint"></i>
                 <span>0%</span>
+                <div class="tiny-ac-rate">
+                    <span>0</span>
+                    <span>/</span>
+                    <span>0</span>
+                </div>
             </div>
+            
         </div>
     </form>
 </body>
@@ -61,7 +67,7 @@
                      +"'cal_type': '"+cal_type+"',"
                      +"'ans_input': '"+ans
                      +"' }",
-               url: "index.aspx/getAns", 
+               url: "index.aspx/ansStatus", 
                cache: false,
                contentType: "application/json", 
                //注意：WebMethod()必须加这项，否则客户端数据不会传到服务端
@@ -73,15 +79,21 @@
                                     +num_1.toString()+cal_type.toString()+num_2.toString()
                                     +"="+ans.toString()
                                     +"</div><i class=\"iconfont icon-icon_gou\"></i></li>" ;
-                        $(".request-box").append(new_res) ;
                         setRate(1) ;
+                        if (100<=(ac+wa)) {
+                            $(".request-box").children().first().remove();
+                        } else {}
+                        $(".request-box").append(new_res) ;
                     } else {
                         var new_res="<li><div class=\"formula-box\">"
                                     +num_1.toString()+cal_type.toString()+num_2.toString()
                                     +"="+ans.toString()
                                     +"</div><i class=\"iconfont icon-close-small\"></i></li>" ;
-                        $(".request-box").append(new_res) ;
                         setRate(2) ;
+                        if (100<=(ac+wa)) {
+                            $(".request-box").children().first().remove();
+                        } else {}
+                        $(".request-box").append(new_res) ;
                     }
                     $("#ans_input").val("") ;
                     setRandom() ;
@@ -133,6 +145,9 @@
         tmp=tmp.substring(0,6) ;
         tmp=tmp+"\%"
         $(".ac-rate>span").text(tmp) ;
+        $(".tiny-ac-rate>span:first-child").text(ac) ;
+        $(".tiny-ac-rate>span:last-child").text(wa) ;
+        $("#ans_input~span").text("ans") ;
     }
 </script>
 </html>
